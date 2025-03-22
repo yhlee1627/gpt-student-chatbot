@@ -4,6 +4,10 @@ import pandas as pd
 
 def load_all_evaluation_results():
     path = "data/evaluation_logs"
+
+    # ✅ 폴더가 없으면 생성 (Streamlit Cloud 첫 실행 대비)
+    os.makedirs(path, exist_ok=True)
+
     records = []
 
     for fname in os.listdir(path):
@@ -14,7 +18,7 @@ def load_all_evaluation_results():
                     "학생 ID": data["student_id"],
                     "대화 ID": data["conversation_id"]
                 }
-                row.update(data["scores"])  # 점수 포함
+                row.update(data["scores"])
                 records.append(row)
 
     return pd.DataFrame(records)
