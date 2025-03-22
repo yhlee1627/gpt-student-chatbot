@@ -4,3 +4,4 @@ __pycache__/
 data/chat_logs/
 data/evaluation_logs/
 *.ttf
+data/users.csv
