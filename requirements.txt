@@ -1,3 +1,6 @@
-streamlit>=1.31.0
+streamlit
+openai
 pandas
-openai>=1.0.0
+fpdf
+plotly
+python-dotenv
