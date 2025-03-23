@@ -53,7 +53,7 @@ def get_gpt_response(prompt, history=None):
     messages.append({"role": "user", "content": prompt})
 
     chat_response = client.chat.completions.create(
-        model="gpt-4o-mini",  # 또는 gpt-3.5-turbo
+        model="gpt-4o-mini", 
         messages=messages
     )
 
